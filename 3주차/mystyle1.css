@@ -1,0 +1,19 @@
+ h1, h2 {
+    color: darkgreen;
+    font-family: "굴림";
+    font-size: 25pt;
+}
+
+ p strong, p em {
+    color: orange;
+    font-family: "궁서";
+    font-size: 15pt;
+    font-style: italic;
+}
+
+ ul ul {
+    color: red;
+    font-family: "휴먼매직체";
+    font-size: 18pt;
+    font-weight: bold;
+} 
