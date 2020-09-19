@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+        div#A {
+            position: absolute;
+            top: 25px;
+            left: 40px;
+            width: 300px;
+            height: 120px;
+            border: 1px solid #000;
+            background-color: #CCC;
+        }
+
+        div#B {
+            position: absolute;
+            top: 20px;
+            left: 50px;
+            right: 30px;
+            bottom: 40px;
+            border: 1px solid #000;
+            background-color: #666;
+        }
+        .A_top {
+            position: absolute;
+            top: -25px;
+            left: 120px;
+            z-index: 10;
+        }
+        .A_left {
+            position: absolute;
+            top: 30px;
+            left: 0px;
+            z-index: 10;
+        }
+        .B_top {
+            position: absolute;
+            top: 15px;
+            left: 180px;
+            z-index: 10;
+        }
+        .B_left {
+            position: absolute;
+            top: 50px;
+            left: 80px;
+            z-index: 10;
+        }
+        .B_right {
+            position: absolute;
+            top: 50px;
+            left: 280px;
+            z-index: 10;
+        }
+        .B_bottom {
+            position: absolute;
+            top: 70px;
+            left: 180px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="A_top">25px</h1>
+    <h1 class="A_left">40px</h1>
+    <h2 class="B_top">20px</h1>
+    <h2 class="B_left">50px</h1>
+    <h2 class="B_right">30px</h1>
+    <h2 class="B_bottom">40px</h1>
+    <div id="A">
+        <div id="B"></div>
+    </div>
+</body>
+</html>
