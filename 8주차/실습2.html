@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HTML5 Example: Canvas</title>
+  <script>
+    function drawOnCanvas() {
+      var ctx = document.getElementById("mycanvas").getContext('2d');
+      var image = new Image();
+      image.src = "lion.png";
+      image.onload = function () {
+        ctx.drawImage(image, 0, 0);
+      }
+    }
+
+    window.addEventListener('load', drawOnCanvas, true);
+  </script>
+</head>
+
+<body>
+  <canvas width="600" height="400" id="mycanvas"></canvas>
+</body>
+
+</html>
