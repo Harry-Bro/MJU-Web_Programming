@@ -14,13 +14,16 @@
             float:left;
         }
     </style>
-    <script src="../jquery-3.5.1.js"></script>
+    <script src="../../jquery-3.5.1.js"></script>
     <script>
         $(function () {
             $('#hideAll').click (function() {
                 $('.dayNight').hide();
             })
-            $('#showAll').click(function () {
+            // $('#showAll').click(function () {
+            //     $('.dayNight').show();
+            // })
+            $('#showAll').click(() => {
                 $('.dayNight').show();
             })
         });
