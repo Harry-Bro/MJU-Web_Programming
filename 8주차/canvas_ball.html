@@ -5,7 +5,7 @@
     <title>Bouncing Ball Example</title>
     <style>
         canvas {
-            background: yellow;
+            background: gray;
             border: 1px dotted black;
         }
     </style>
@@ -21,7 +21,7 @@
             var context = canvas.getContext('2d');
             context.clearRect(0, 0, 300, 200);
             context.beginPath();
-            context.fillStyle = "red";
+            context.fillStyle = "green";
             context.arc(x, y, 20, 0, Math.PI * 2, true);
             context.closePath();
             context.fill();
@@ -32,11 +32,11 @@
             x += dx;
             y += dy;
         }
-        setInterval(draw, 10);
+        setInterval(draw, 100);
     </script>
 </head>
 
-<body>
+<body style="background-color: black;">
     <canvas id="myCanvas" width="300" height="200"></canvas>
 </body>
 

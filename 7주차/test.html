@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="images/dog.png" alt="dog" id="img">
+    <button type="button" id="btnChange">변경</button>
+
+    <script>
+        let btnChange = document.getElementById("btnChange");
+        btnChange.addEventListener("click", changeImg);
+
+        function changeImg() {
+            console.log("click");
+            let image = document.getElementById("img");
+
+            if(image.src === "images/dog.png") {
+
+                image.src = "images/flower1.jpg";
+            } else {
+                image.src = "images/dog.png"
+            }
+        }
+
+    </script>
+</body>
+</html>

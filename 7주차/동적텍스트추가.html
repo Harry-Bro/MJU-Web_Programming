@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="here">클릭하면 이 밑으로 텍스트가 추가 될 것임</div>
+
+    <script>
+        document.getElementById('here').addEventListener('click', () => {
+            let node = document.createTextNode("안녕");
+            let br = document.createElement("br");
+            document.getElementById('here').appendChild(br);
+            document.getElementById('here').appendChild(node);
+        });
+    </script>
+
+</body>
+</html>

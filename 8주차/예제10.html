@@ -9,14 +9,14 @@
 
 <body>
 
-    <canvas id="myCanvas" width="600" height="400"></canvas>
+    <canvas id="myCanvas" width="600" height="400" style="background-color: black;"></canvas>
     <script>
         var canvas = document.getElementById("myCanvas");
         var context = canvas.getContext("2d");
         var image = new Image();
         image.src = 'html5_logo.png';
         image.onload = () => {
-            context.drawImage(image, 0, 0);
+            context.drawImage(image, 20, 20);
         }
     </script>
 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <p onclick="remove(id)">a</p>
+        <p onclick="remove(id)">b</p>
+        <p>c</p>
+        <p>d</p>
+    </div>
+
+    <script>
+        const remove = (id) => {
+            let parent = document.getElementById('container');
+            let childe = document.getElementById(id);
+            parent.removeChild(childe);
+        };
+
+        const pTag = document.querySelectorAll('p');
+        for(let i = 0; i < pTag.length; i++) {
+            
+            pTag[i].setAttribute('id', 'p' + i);
+            let id = pTag[i].getAttribute('id');
+            // pTag[i].addEventListener('click', remove(id));
+            console.log(id);    
+        };
+
+    </script>
+
+</body>
+
+</html>
