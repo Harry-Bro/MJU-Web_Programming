@@ -3,7 +3,7 @@
 <html lang="ko">
 <head>
     <meta charset="utf-8" />
-    <title>컴퓨터공학과 안내</title>
+    <title>경영학과 안내</title>
     <style>
         body {
             font-family: "맑은 고딕";
@@ -66,20 +66,29 @@
             clear: both;
         }
     </style>
-    <script src="../jquery-3.5.1.js"></script>
+    <script src="../../jquery-3.5.1.js"></script>
     <script>
-        $(document).ready(function () {
-            $("#bttn2").click(function () {
-                $("article").addClass(function (i) {
-                    return "block" + i;
+        // $(document).ready(function () {
+        //     $("#bttn2").click(function () {
+        //         $("article").addClass(function (i) {
+        //             return "block" + i;
+        //         });
+        //     });
+        // });
+
+        $(() => {
+            $('#bttn2').click(() => {
+                $('article').addClass((i) => {
+                    return 'block' + i;
                 });
+                $('#bttn2').blur();
             });
         });
     </script>
 </head>
 <body>
     <form id="topform">
-        <input type="button" id="bttn2" value="단락의 색상을 각각 다르게"> 
+        <input type="button" id="bttn2" value="단락의 색상을 각각 다르게!"> 
     </form>
     <nav> 
         <ul>

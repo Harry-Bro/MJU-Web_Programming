@@ -14,20 +14,28 @@
             margin:10px 20px;
         }
     </style>
-    <script src="../jquery-3.5.1.js"></script>
+    <script src="../../jquery-3.5.1.js"></script>
     <script>
-        $(document).ready(function () {
-            $("img").click(function () {
-                $("img").hide(1000);
+        $(() => {
+            $('img:eq(0)').click(function () {
+                $('img:eq(0)').hide(1000);
+            });
+            $('img:eq(1)').click(function () {
+                $('img:eq(1)').hide('fast');
             });
         });
+
+        
     </script>
 </head>
 <body>
-    <p>hide(1000)을 사용해 천천히 사라지게</p>
+    
     <div id="gallery">
         <figure>
+            <p>hide(1000)을 사용해 천천히 사라지게</p>
             <img src="images/spring.jpg" width="400" height="265" alt="유채꽃과 매화꽃">
+            <p>hide('fast')을 사용해 천천히 사라지게</p>
+            <img src="images/fall.JPG" width="400" height="265" alt="유채꽃과 매화꽃">
             <figcaption><b>한국의 봄</b> 화사하게 피어난 분홍 매화꽃</figcaption>
         </figure>
     </div>

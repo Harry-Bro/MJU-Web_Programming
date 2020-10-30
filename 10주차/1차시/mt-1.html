@@ -46,7 +46,9 @@
 	        });
 	        $('#bttn2').click(function () {
 	            $("<button class='detail'>자세히 보기</button>").appendTo("li");
-	        });
+            });
+            let depart = $('ul > li:first-child').html().replace('컴퓨터공학', '경영학');
+            $('ul > li:first-child').html(depart);
 	    });
 	</script>
 </head>

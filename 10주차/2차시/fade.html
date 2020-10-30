@@ -12,13 +12,15 @@
             margin:5px 25px;      
         }
     </style>
-    <script src="../jquery-3.5.1.js"></script>
+    <script src="../../jquery-3.5.1.js"></script>
     <script>
         $(document).ready(function () {
-            $("#bttn1").click(function () {
+            $("button:eq(0)").click(function () {
+                $(this).blur();
                 $("figure").fadeOut("slow");
             });
-            $("#bttn2").click(function () {
+            $("button:eq(1)").click((e) => {
+                $(e.target).blur();
                 $("figure").fadeIn("slow");              
             });
         });

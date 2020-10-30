@@ -60,11 +60,16 @@
             clear: both;
         }
     </style>
-    <script src="../jquery-3.5.1.js"></script>
+    <script src="../../jquery-3.5.1.js"></script>
     <script>
-        $(document).ready(function () {
-            $("#bttn1").click(function () {
-                $("article:first p").addClass("bluetxt");
+        // $(document).ready(function () {
+        //     $("#bttn1").click(function () {
+        //         $("article:first p").addClass("bluetxt");
+        //     });
+        // });
+        $(() => {
+            $('#bttn1').click(() => {
+                $('article:first p').addClass('bluetxt');
             });
         });
     </script>

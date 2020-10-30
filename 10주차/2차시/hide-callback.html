@@ -14,12 +14,21 @@
             margin:10px 20px;
         }
     </style>
-    <script src="../jquery-3.5.1.js"></script>
+    <script src="../../jquery-3.5.1.js"></script>
     <script>
-        $(document).ready(function () {
-            $("img").click(function () {
-                $("img").hide("fast", function () {
-                    $("#gallery").css("background-color", "pink");
+        // $(document).ready(function () {
+        //     $("img").click(function () {
+        //         $("img").hide("fast", function () {
+        //             $("#gallery").css("background-color", "pink");
+        //         });
+        //     });
+        // });
+
+        $(() =>  {
+            $('img').on('click', () => {
+                $('#gallery').css({
+                    'background-color': '#333',
+                    'color': 'white'
                 });
             });
         });
