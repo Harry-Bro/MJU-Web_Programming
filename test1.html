@@ -1,23 +1,50 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="jquery-3.5.1.js"></script>
 </head>
+
 <body>
-    <canvas id="myCanvas"></canvas>
-
+    <form action="#">
+        <label for="a">first number: </label>
+        <input type="text">
+        <label for="b">second number: </label>
+        <input type="text">
+        <button type="button" id="btnSum">ADD</button>
+    </form>
+    <canvas id='myCanvas'></canvas>
+    <button type="button">GREEN</button>
     <script>
-
-        const canvas = document.getElementById('id');
-        const context = canvas.getContext('2d');
         
-        context.setAttribute('width', '500');
-        context.setAttribute('height', '500');
-        context.style.border('1px solid black');
+        $('#btnSum').click(() => {
+            let x = $('input[type=text]').eq(0).val();
+            let y = $('input[type=text]').eq(1).val();
+            let sum = parseInt(x) + parseInt(y);
+            alert(sum);
+        });
+        $('#myCanvas').eq(0).attr({
+            'width': '400',
+            'height': '400'
+        }).css({
+            'border': '1px solid black'
+        });
+        let ctx = $('#myCanvas')[0].getContext('2d');
 
+        function drawGreen() {
+            ctx.moveTo(0, 0);
+            ctx.lineTo(200, 200);
+            ctx.lineTo(400, 0);
+            ctx.fillStyle = 'green';
+            ctx.fill();
+            ctx.stroke();
+        }
+
+        $('button').click(drawGreen);
     </script>
-
 </body>
+
 </html>

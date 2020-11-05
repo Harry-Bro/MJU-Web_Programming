@@ -2,13 +2,14 @@
 <html>
 <head>
     <style>
-        div {
+        div, span {
             width: 100px;
             height: 100px;
             background: red;
             position: relative;
-            animation: myfirst 5s;
-            -webkit-animation: myfirst 5s; /* Safari and Chrome */
+            animation: myfirst 5s ease-in-out infinite;
+            /* Safari and Chrome */
+            /* -webkit-animation: myfirst 5s;  */
         }
 
         @keyframes myfirst {
@@ -80,6 +81,9 @@
 <body>
 
     <div></div>
+    <span>abc</span>
+    <span>abc</span>
+    <span>abc</span>
 
 </body>
 </html>
